@@ -34,52 +34,68 @@ namespace velibService
 
         public string GetAvaibleBike(string town, string station)
         {
-            string result = "";
+            string result = "station inexistante";
             //do the request to get all access point
-            WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + town + "&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552");
-            request.Credentials = CredentialCache.DefaultCredentials;
-            WebResponse response = request.GetResponse();
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            string responseFromServer = reader.ReadToEnd();
-
-            JArray j = JArray.Parse(responseFromServer);
-            foreach (JObject item in j)
+            try
             {
-                string name = (string)item.SelectToken("name");
-                if (name.Contains(station.ToUpper()))
+                WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + town + "&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552");
+                request.Credentials = CredentialCache.DefaultCredentials;
+                WebResponse response = request.GetResponse();
+                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+                Stream dataStream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(dataStream);
+                string responseFromServer = reader.ReadToEnd();
+
+                JArray j = JArray.Parse(responseFromServer);
+                foreach (JObject item in j)
                 {
-                    result = (string)item.SelectToken("available_bikes");
-                    break;
+                    string name = (string)item.SelectToken("name");
+                    if (name.Contains(station.ToUpper()))
+                    {
+                        result = (string)item.SelectToken("available_bikes");
+                        break;
+                    }
                 }
+                reader.Close();
+                response.Close();
+                return result;
             }
-            reader.Close();
-            response.Close();
-            return result;
+            catch (WebException e)
+            {
+                result = "ville invalide";
+                return result;
+            }
+
         }
 
         public List<string> GetStations(string town)
         {
             List<string> result = new List<string>();
             //do the request to get all access point
-            WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract="+town+"&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552");
-            request.Credentials = CredentialCache.DefaultCredentials;
-            WebResponse response = request.GetResponse();
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            string responseFromServer = reader.ReadToEnd();
-
-            JArray j = JArray.Parse(responseFromServer);
-            foreach (JObject item in j)
+            try
             {
-                result.Add((string)item.SelectToken("name"));
-            }
+                WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + town + "&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552");
+                request.Credentials = CredentialCache.DefaultCredentials;
+                WebResponse response = request.GetResponse();
+                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+                Stream dataStream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(dataStream);
+                string responseFromServer = reader.ReadToEnd();
 
-            reader.Close();
-            response.Close();
-            return result;
+                JArray j = JArray.Parse(responseFromServer);
+                foreach (JObject item in j)
+                {
+                    result.Add((string)item.SelectToken("name"));
+                }
+                reader.Close();
+                response.Close();
+                return result;
+            }
+            catch(WebException e)
+            {
+                result.Add("Ville inconnue");
+                return result;
+            }
         }
     }
 }
