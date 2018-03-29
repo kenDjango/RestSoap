@@ -8,7 +8,6 @@ namespace consoleClient
 {
     class Program
     {
-
         private static string processCommand(string command, Service1Client client)
         {
             string res = "\n";
@@ -17,10 +16,10 @@ namespace consoleClient
             switch (tokens[0])
             {
                 case "help":
-                    Console.WriteLine("Commandes disponibles:");
-                    Console.WriteLine("contracts");
-                    Console.WriteLine("stations town");
-                    Console.WriteLine("bikes town station");
+                    res += "Commandes disponibles:\n";
+                    res += "contracts\n";
+                    res += "stations town\n";
+                    res += "bikes town station\n";
                     break;
                 case "contracts":
                     response = client.GetAllContract();
@@ -40,10 +39,10 @@ namespace consoleClient
                     res = client.GetAvaibleBike(tokens[1], mergeStrings(tokens)) + "\n"; 
                     break;
                 default:
-                    Console.WriteLine("Erreur: Command invalide");
+                    res = "Erreur: Command invalide";
                     break;
             }
-            return res;
+            return res + "\n";
         }
 
         private static string mergeStrings(string[] strings)
