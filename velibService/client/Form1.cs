@@ -24,24 +24,26 @@ namespace client
             button3.Click += new EventHandler(this.button3_Click);
         }
 
-        private void LoadContract()
+        private async void LoadContract()
         {
-            string[] res = client.GetAllContract();
+            string[] res = await Task.Run(() => client.GetAllContract());
             comboBox1.Items.AddRange(res);
         }
 
-        private void choose_town(object sender, EventArgs e)
+        private async void choose_town(object sender, EventArgs e)
         {
             comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(client.GetStations(comboBox1.GetItemText(comboBox1.SelectedItem)));
+            string town = comboBox1.GetItemText(comboBox1.SelectedItem);
+            string[] res = await Task.Run(() => client.GetStations(town));
+            comboBox2.Items.AddRange(res);
             comboBox2.SelectedIndex = 0;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
             string town = comboBox1.GetItemText(comboBox1.SelectedItem);
             string station = comboBox2.GetItemText(comboBox2.SelectedItem);
-            label3.Text = client.GetAvaibleBike(town, station);
+            label3.Text = await Task.Run(() => client.GetAvaibleBike(town, station));
         }
     }
 }
