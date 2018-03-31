@@ -11,26 +11,26 @@
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-[System.ServiceModel.ServiceContractAttribute(ConfigurationName="IService1")]
+[System.ServiceModel.ServiceContractAttribute(ConfigurationName = "IService1")]
 public interface IService1
 {
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAvaibleBike", ReplyAction="http://tempuri.org/IService1/GetAvaibleBikeResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetAvaibleBike", ReplyAction = "http://tempuri.org/IService1/GetAvaibleBikeResponse")]
     string GetAvaibleBike(string town, string station);
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAvaibleBike", ReplyAction="http://tempuri.org/IService1/GetAvaibleBikeResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetAvaibleBike", ReplyAction = "http://tempuri.org/IService1/GetAvaibleBikeResponse")]
     System.Threading.Tasks.Task<string> GetAvaibleBikeAsync(string town, string station);
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStations", ReplyAction="http://tempuri.org/IService1/GetStationsResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetStations", ReplyAction = "http://tempuri.org/IService1/GetStationsResponse")]
     string[] GetStations(string town);
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStations", ReplyAction="http://tempuri.org/IService1/GetStationsResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetStations", ReplyAction = "http://tempuri.org/IService1/GetStationsResponse")]
     System.Threading.Tasks.Task<string[]> GetStationsAsync(string town);
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllContract", ReplyAction="http://tempuri.org/IService1/GetAllContractResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetAllContract", ReplyAction = "http://tempuri.org/IService1/GetAllContractResponse")]
     string[] GetAllContract();
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllContract", ReplyAction="http://tempuri.org/IService1/GetAllContractResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetAllContract", ReplyAction = "http://tempuri.org/IService1/GetAllContractResponse")]
     System.Threading.Tasks.Task<string[]> GetAllContractAsync();
 }
 
@@ -43,56 +43,56 @@ public interface IService1Channel : IService1, System.ServiceModel.IClientChanne
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 public partial class Service1Client : System.ServiceModel.ClientBase<IService1>, IService1
 {
-    
+
     public Service1Client()
     {
     }
-    
-    public Service1Client(string endpointConfigurationName) : 
+
+    public Service1Client(string endpointConfigurationName) :
             base(endpointConfigurationName)
     {
     }
-    
-    public Service1Client(string endpointConfigurationName, string remoteAddress) : 
+
+    public Service1Client(string endpointConfigurationName, string remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
             base(binding, remoteAddress)
     {
     }
-    
+
     public string GetAvaibleBike(string town, string station)
     {
         return base.Channel.GetAvaibleBike(town, station);
     }
-    
+
     public System.Threading.Tasks.Task<string> GetAvaibleBikeAsync(string town, string station)
     {
         return base.Channel.GetAvaibleBikeAsync(town, station);
     }
-    
+
     public string[] GetStations(string town)
     {
         return base.Channel.GetStations(town);
     }
-    
+
     public System.Threading.Tasks.Task<string[]> GetStationsAsync(string town)
     {
         return base.Channel.GetStationsAsync(town);
     }
-    
+
     public string[] GetAllContract()
     {
         return base.Channel.GetAllContract();
     }
-    
+
     public System.Threading.Tasks.Task<string[]> GetAllContractAsync()
     {
         return base.Channel.GetAllContractAsync();

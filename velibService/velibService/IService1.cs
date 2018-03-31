@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace velibService
 {
@@ -12,13 +13,13 @@ namespace velibService
     public interface IService1
     {
         [OperationContract]
-        string GetAvaibleBike(string town, string station);
+        Task<string> GetAvaibleBike(string town, string station);
 
         [OperationContract]
-        List<string> GetStations(string town);
+        Task<List<string>> GetStations(string town);
 
         [OperationContract]
-        List<string> GetAllContract();
+        Task<List<string>> GetAllContract();
 
         // TODO: ajoutez vos opérations de service ici
     }

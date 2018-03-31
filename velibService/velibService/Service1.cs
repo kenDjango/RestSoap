@@ -4,6 +4,8 @@ using System.Linq;
 using System.IO;
 using System.Net;
 using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
+
 
 namespace velibService
 {
@@ -14,7 +16,7 @@ namespace velibService
         private static List<string> contractCache = new List<string>();
         private static Dictionary<string, List<string>> stationsCache = new Dictionary<string, List<string>>();
 
-        public List<string> GetAllContract()
+        public async Task<List<string>> GetAllContract()
         {
             if (contractCache.Count >  0)
             {
@@ -25,7 +27,7 @@ namespace velibService
             {
                 List<string> result = new List<string>();
                 //do the request to get all access point
-                WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/contracts/?apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552");
+                WebRequest request = await Task.Run(() => request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/contracts/?apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552"));
                 request.Credentials = CredentialCache.DefaultCredentials;
                 WebResponse response = request.GetResponse();
                 Console.WriteLine(((HttpWebResponse)response).StatusDescription);
@@ -45,7 +47,7 @@ namespace velibService
             }
         }
 
-        public List<string> GetStations(string town)
+        public async Task<List<string>> GetStations(string town)
         {
             if (stationsCache.ContainsKey(town))
             {
@@ -57,7 +59,7 @@ namespace velibService
                 //do the request to get all access point
                 try
                 {
-                    WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + town + "&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552");
+                    WebRequest request = await Task.Run(() => request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + town + "&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552"));
                     request.Credentials = CredentialCache.DefaultCredentials;
                     WebResponse response = request.GetResponse();
                     Console.WriteLine(((HttpWebResponse)response).StatusDescription);
@@ -83,13 +85,12 @@ namespace velibService
             }
         }
 
-        public string GetAvaibleBike(string town, string station)
+        public async Task<string> GetAvaibleBike(string town, string station)
         {
             string result = "station inexistante";
-            //do the request to get all access point
             try
             {
-                WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + town + "&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552");
+                WebRequest request = await Task.Run(() => request =  WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + town + "&apiKey=fd72347f5b5342b4139b5bc40ac8b0fa058e9552"));
                 request.Credentials = CredentialCache.DefaultCredentials;
                 WebResponse response = request.GetResponse();
                 Console.WriteLine(((HttpWebResponse)response).StatusDescription);
