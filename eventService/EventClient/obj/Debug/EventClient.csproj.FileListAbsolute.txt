@@ -1,0 +1,14 @@
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\EventClient\bin\Debug\EventClient.exe.config
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\EventClient\bin\Debug\EventClient.exe
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\EventClient\bin\Debug\EventClient.pdb
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\EventClient\obj\Debug\EventClient.csprojResolveAssemblyReference.cache
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\EventClient\obj\Debug\EventClient.csproj.CoreCompileInputs.cache
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\EventClient\obj\Debug\EventClient.exe
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\EventClient\obj\Debug\EventClient.pdb
+C:\Users\Ken\Documents\SI4\Service_oriented_computing\RestSoap\eventService\EventClient\bin\Debug\EventClient.exe.config
+C:\Users\Ken\Documents\SI4\Service_oriented_computing\RestSoap\eventService\EventClient\bin\Debug\EventClient.exe
+C:\Users\Ken\Documents\SI4\Service_oriented_computing\RestSoap\eventService\EventClient\bin\Debug\EventClient.pdb
+C:\Users\Ken\Documents\SI4\Service_oriented_computing\RestSoap\eventService\EventClient\obj\Debug\EventClient.csprojResolveAssemblyReference.cache
+C:\Users\Ken\Documents\SI4\Service_oriented_computing\RestSoap\eventService\EventClient\obj\Debug\EventClient.csproj.CoreCompileInputs.cache
+C:\Users\Ken\Documents\SI4\Service_oriented_computing\RestSoap\eventService\EventClient\obj\Debug\EventClient.exe
+C:\Users\Ken\Documents\SI4\Service_oriented_computing\RestSoap\eventService\EventClient\obj\Debug\EventClient.pdb

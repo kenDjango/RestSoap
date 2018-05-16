@@ -1,0 +1,22 @@
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\bin\Debug\ClientToLaunchHost.exe.config
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\bin\Debug\ClientToLaunchHost.exe
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\bin\Debug\ClientToLaunchHost.pdb
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\bin\Debug\ClassLibraryWCF.dll
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\bin\Debug\ClassLibraryWCF.pdb
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\obj\Debug\HostLauncher.csprojResolveAssemblyReference.cache
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\obj\Debug\HostLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\obj\Debug\ClientToLaunchHost.exe
+C:\Users\Ken\Desktop\Web-Service-Eventing-master\ClientToLaunchHost\obj\Debug\ClientToLaunchHost.pdb
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\bin\Debug\ClientToLaunchHost.exe.config
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\bin\Debug\ClientToLaunchHost.exe
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\bin\Debug\ClientToLaunchHost.pdb
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\bin\Debug\ClassLibraryWCF.dll
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\bin\Debug\ClassLibraryWCF.pdb
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\obj\Debug\HostLauncher.csprojResolveAssemblyReference.cache
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\obj\Debug\HostLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\obj\Debug\ClientToLaunchHost.exe
+C:\Users\Ken\Desktop\Web-Service-Eventing-master - Copie\HostLauncher\obj\Debug\ClientToLaunchHost.pdb
